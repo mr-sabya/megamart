@@ -1,0 +1,28 @@
+.main-menu{
+    padding: 15px 0;
+    border-bottom: var(--border);
+}
+
+.menu .menu-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F3F9FB;
+    color: var(--heading);
+    padding: 9px 20px;
+    border-radius: 18px;
+    font-size: 18px;
+}
+
+.menu .active .menu-item{
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.menu .menu-item svg{
+    color: var(--primary-color);
+}
+
+.menu .active .menu-item svg{
+    color: #fff;
+}
