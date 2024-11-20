@@ -8,6 +8,7 @@ import Product3 from '~/images/product-3.png'
 import Product4 from '~/images/product-4.png'
 import Product5 from '~/images/product-5.png'
 import './Products.css'
+import Index from '~/routes/_index'
 
 
 const products = [
@@ -63,9 +64,9 @@ function Products({ title }: { title: string }) {
                     <Link to="">View All <IoIosArrowForward /></Link>
                 </div>
 
-                <div className="products grid grid-cols-5 gap-4">
+                <div className="products grid xl:grid-cols-5 grid-cols-2 gap-4">
                     {products.map((product, index) => (
-                        <div className="product">
+                        <div className="product" key={index}>
                             <div className="image">
                                 <Link to='/'><img src={product.image} alt="" /></Link>
                                 <div className="off">
