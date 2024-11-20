@@ -1,6 +1,8 @@
 .main-menu{
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: var(--border);
+    background: #fff;
+    transition: all .5s linear;
 }
 
 .menu .menu-item{
@@ -9,9 +11,9 @@
     gap: 10px;
     background: #F3F9FB;
     color: var(--heading);
-    padding: 9px 20px;
-    border-radius: 18px;
-    font-size: 18px;
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 .menu .active .menu-item{
@@ -25,4 +27,12 @@
 
 .menu .active .menu-item svg{
     color: #fff;
+}
+
+.sticky{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 0 5px 3px #b9b9b942;
 }

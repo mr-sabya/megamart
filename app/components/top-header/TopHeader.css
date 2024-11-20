@@ -3,16 +3,20 @@
     padding: 10px 0;
 }
 
+.top-header p{
+    font-size: 13px;
+    color: var(--text);
+}
 
 .top-header .icon a{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     color: var(--text);
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .top-header .icon svg{
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 18px;
 }

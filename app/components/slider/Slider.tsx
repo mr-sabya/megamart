@@ -38,8 +38,10 @@ function Slider() {
                                     <h2>SMART WEARABLE.</h2>
                                     <p>UP to 80% OFF</p>
                                 </div>
-                                <img src={Shape} className='shape' alt="" />
-                                <img src={BannerImage1} className='product' alt="" />
+
+                                <div className="imgage">
+                                    <img src={BannerImage1} className='product' alt="" />
+                                </div>
 
                             </div>
                         </SwiperSlide>
@@ -50,8 +52,10 @@ function Slider() {
                                     <h2>SMART WEARABLE.</h2>
                                     <p>UP to 80% OFF</p>
                                 </div>
-                                <img src={Shape} className='shape' alt="" />
-                                <img src={BannerImage1} className='product' alt="" />
+
+                                <div className="imgage">
+                                    <img src={BannerImage1} className='product' alt="" />
+                                </div>
 
                             </div>
                         </SwiperSlide>
@@ -62,11 +66,15 @@ function Slider() {
                                     <h2>SMART WEARABLE.</h2>
                                     <p>UP to 80% OFF</p>
                                 </div>
-                                <img src={Shape} className='shape' alt="" />
-                                <img src={BannerImage1} className='product' alt="" />
+
+                                <div className="imgage">
+                                    <img src={BannerImage1} className='product' alt="" />
+                                </div>
 
                             </div>
                         </SwiperSlide>
+
+
 
                     </Swiper>
 
@@ -75,6 +83,7 @@ function Slider() {
 
                     {/* Custom Pagination */}
                     <div className="swiper-pagination"></div>
+                    <img src={Shape} className='shape' alt="" />
                 </div>
 
             </div>

@@ -10,7 +10,8 @@ import { RiDiscountPercentLine } from 'react-icons/ri';
 function TopHeader() {
     return (
         <div className="top-header">
-            <div className='container mx-auto flex justify-end'>
+            <div className='container mx-auto flex justify-between'>
+                <p>Welcome to worldwide Megamart!</p>
                 <div className="action-icons flex justify-between gap-16">
                     <div className="icon">
                         <Link to="/">

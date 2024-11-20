@@ -11,6 +11,7 @@ function Menu() {
     const [openDropdown, setOpenDropdown] = useState<number | null>(null);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const location = useLocation(); // Get current location (current URL)
+    const [isSticky, setIsSticky] = useState(false);
 
     const menuItems = [
         { name: "Home", path: "/", items: ["Overview", "Updates", "Reports"] },
@@ -37,6 +38,20 @@ function Menu() {
         };
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const handleDropdownClick = (index: number) => {
         // Toggle dropdown on the clicked index
         setOpenDropdown(openDropdown === index ? null : index);
@@ -49,7 +64,7 @@ function Menu() {
     }
 
     return (
-        <div className="main-menu">
+        <div className={`main-menu ${isSticky ? "sticky" : ""}`}>
             <div className='container mx-auto'>
                 <nav className="menu" ref={menuRef}>
                     <ul className="flex gap-5">

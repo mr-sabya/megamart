@@ -5,30 +5,35 @@
 
 .banner {
     position: relative;
+    background: #212844;
+    color: #fff;
+    padding: 40px 130px;
+    /* padding-bottom: 112px; */
+    border-radius: 18px;
+    
 }
 
 .banner .banner-item {
-    background: #212844;
-    color: #fff;
-    padding: 40px 120px;
-    padding-bottom: 112px;
-    border-radius: 18px;
-    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.banner .banner-item .shape {
+.banner .shape {
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 0;
     width: auto;
+    height: 100%;
+    border-radius: 0 18px 0 0;
 }
 
-.banner .banner-item .product {
+/* .banner .banner-item .product {
     position: absolute;
     top: 50%;
     right: 120px;
     transform: translateY(-50%);
-}
+} */
 
 
 .banner .banner-item .text p {
@@ -38,6 +43,7 @@
 .banner .banner-item .text h2 {
     font-size: 50px;
     font-weight: bold;
+    letter-spacing: 15px;
 }
 
 
@@ -47,8 +53,8 @@
 /* Custom arrow styles */
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--primary-color);
-    background-color: #F3F9FB;
+    color: #fff;
+    background-color: #212844;
     /* Background */
     height: 86px;
     width: 86px;
@@ -74,7 +80,7 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: #b7f8da;
+    background-color: #404d79;
 }
 
 .swiper-button-prev:after, .swiper-button-next:after{
