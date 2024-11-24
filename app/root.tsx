@@ -1,19 +1,24 @@
 import {
+    isRouteErrorResponse,
     Links,
     Meta,
     Outlet,
     Scripts,
     ScrollRestoration,
+    useRouteError,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
 import "~/style/style.css"
+
 import Header from "./components/header/Header";
 import TopHeader from "./components/top-header/TopHeader";
 import Menu from "./components/menu/Menu";
+import Footer from "./components/footer/Footer";
 
 export const links: LinksFunction = () => [
+    
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
         rel: "preconnect",
@@ -25,6 +30,22 @@ export const links: LinksFunction = () => [
         href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
     },
 ];
+
+export function ErrorBoundary() {
+    const error = useRouteError();
+    return (
+        <div>
+            <h1>
+                {isRouteErrorResponse(error)
+                    ? `${error.status} ${error.statusText}`
+                    : error instanceof Error
+                        ? error.message
+                        : "Unknown Error"}
+            </h1>
+        </div>
+    );
+}
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -40,6 +61,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Header />
                 <Menu />
                 {children}
+                <Footer />
                 <ScrollRestoration />
                 <Scripts />
             </body>

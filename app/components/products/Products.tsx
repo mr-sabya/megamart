@@ -55,34 +55,27 @@ const products = [
 
 ];
 
-function Products({ title }: { title: string }) {
+function Products({number} : {number: number}) {
     return (
-        <div className='section product-section'>
-            <div className="container mx-auto">
-                <div className="title-section">
-                    <h3 className='title' dangerouslySetInnerHTML={{ __html: title }} />
-                    <Link to="">View All <IoIosArrowForward /></Link>
-                </div>
 
-                <div className="products grid xl:grid-cols-5 grid-cols-2 gap-4">
-                    {products.map((product, index) => (
-                        <div className="product" key={index}>
-                            <div className="image">
-                                <Link to='/'><img src={product.image} alt="" /></Link>
-                                <div className="off">
-                                    <span>56% OFF</span>
-                                </div>
-                            </div>
-                            <div className="text">
-                                <h4><Link to=''>{product.name}</Link></h4>
-                                <p className='price'>₹{product.price} <span>₹{product.old_price}</span></p>
-                                <p className='save'>Save - ₹{product.save}</p>
-                            </div>
+
+        <div className={`products grid ${number == 4 ? 'xl:grid-cols-4': 'xl:grid-cols-5'} grid-cols-2 gap-4`}>
+            {products.map((product, index) => (
+                <div className="product" key={index}>
+                    <div className="image">
+                        <Link to='/'><img src={product.image} alt="" /></Link>
+                        <div className="off">
+                            <span>56% OFF</span>
                         </div>
-                    ))}
-
+                    </div>
+                    <div className="text">
+                        <h4><Link to=''>{product.name}</Link></h4>
+                        <p className='price'>₹{product.price} <span>₹{product.old_price}</span></p>
+                        <p className='save'>Save - ₹{product.save}</p>
+                    </div>
                 </div>
-            </div>
+            ))}
+
         </div>
     )
 }

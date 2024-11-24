@@ -51,7 +51,7 @@
 
 
 /* Custom arrow styles */
-.swiper-button-next,
+.banner .swiper-button-next,
 .swiper-button-prev {
     color: #fff;
     background-color: #212844;
@@ -68,34 +68,34 @@
     
 }
 
-.swiper-button-next {
+.banner .swiper-button-next {
     right: 0;
     transform: translate(50%, -25%);
 }
 
-.swiper-button-prev {
+.banner .swiper-button-prev {
     left: 0;
     transform: translate(-50%, -25%);
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.banner .swiper-button-next:hover,
+.banner .swiper-button-prev:hover {
     background-color: #404d79;
 }
 
-.swiper-button-prev:after, .swiper-button-next:after{
+.banner .swiper-button-prev:after, .swiper-button-next:after{
     font-size: 26px;
 }
 
 /* Custom dot styles */
-.swiper-pagination {
+.banner .custom-swiper-pagination {
     position: absolute;
     bottom: 40px !important;
     left: 120px !important;
     display: flex;
 }
 
-.swiper-pagination-bullet {
+.banner .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background: #fff !important;
@@ -104,7 +104,7 @@
     opacity: 1 !important;
 }
 
-.swiper-pagination-bullet-active {
+.banner .swiper-pagination-bullet-active {
     /* background: #007aff !important; */
     /* Active dot color */
     width: 25px;

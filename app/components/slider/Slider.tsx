@@ -1,7 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
-
 import 'swiper/swiper-bundle.css';
 
 import './Slider.css'
@@ -24,7 +21,7 @@ function Slider() {
                             prevEl: '.swiper-button-prev',
                         }}
                         pagination={{            // Dots
-                            el: '.swiper-pagination',
+                            el: '.custom-swiper-pagination',
                             clickable: true,       // Enable clicking on dots
                         }}
                         loop={true}               // Infinite loop of slides
@@ -82,7 +79,7 @@ function Slider() {
                     <div className="swiper-button-next"></div>
 
                     {/* Custom Pagination */}
-                    <div className="swiper-pagination"></div>
+                    <div className="custom-swiper-pagination"></div>
                     <img src={Shape} className='shape' alt="" />
                 </div>
 

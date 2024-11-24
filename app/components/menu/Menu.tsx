@@ -14,13 +14,14 @@ function Menu() {
     const [isSticky, setIsSticky] = useState(false);
 
     const menuItems = [
-        { name: "Home", path: "/", items: ["Overview", "Updates", "Reports"] },
-        { name: "Services", path: "/services", items: ["Web Development", "SEO", "Marketing"] },
-        { name: "About Us", path: "/about", items: ["Team", "History", "Mission"] },
+        { name: "Home", path: "/", items: [] },
+        { name: "Categories", path: "/categories", items: [] },
+        { name: "Shop", path: "/shop", items: [] },
+        { name: "Support", path: "/support", items: [] },
         { name: "Projects", path: "/projects", items: ["Ongoing", "Completed", "Upcoming"] },
         { name: "Blog", path: "/blog", items: ["Tech", "Lifestyle", "Business"] },
         { name: "Contact", path: "/contact", items: ["Email", "Phone", "Location"] },
-        { name: "Support", path: "/support", items: ["FAQs", "Live Chat", "Help Center"] },
+       
     ];
 
     useEffect(() => {
@@ -70,28 +71,37 @@ function Menu() {
                     <ul className="flex gap-5">
                         {menuItems.map((menu, index) => (
                             <li key={menu.name} className={`relative ${isActive(menu.path) ? "active" : ""}`}>
-                                <button
-                                    onClick={() => handleDropdownClick(index)}
-                                    className="menu-item"
-                                >
-                                    {menu.name}
-                                    <IoIosArrowDown />
-                                </button>
 
-                                {openDropdown === index && (
-                                    <ul className="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg z-10">
-                                        {menu.items.map((item, idx) => (
-                                            <li key={idx}>
-                                                <a
-                                                    href={`/${menu.name.toLowerCase()}/${item.toLowerCase()}`}
-                                                    className="block px-4 py-2 hover:bg-gray-100"
-                                                >
-                                                    {item}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                {menu.items.length > 0 ? (
+                                    <>
+                                        <button
+                                            onClick={() => handleDropdownClick(index)}
+                                            className="menu-item"
+                                        >
+                                            {menu.name}
+                                            <IoIosArrowDown />
+                                        </button>
+
+                                        {openDropdown === index && (
+                                            <ul className="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg z-10">
+                                                {menu.items.map((item, idx) => (
+                                                    <li key={idx}>
+                                                        <a
+                                                            href={`/${menu.name.toLowerCase()}/${item.toLowerCase()}`}
+                                                            className="block px-4 py-2 hover:bg-gray-100"
+                                                        >
+                                                            {item}
+                                                        </a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </>
+                                ) : (
+                                    <Link className='menu-item' to={menu.path}>{menu.name}</Link>
+                                    // Optional content for empty menu.items
                                 )}
+
                             </li>
                         ))}
 

@@ -9,71 +9,63 @@ import './Categories.css'
 
 function Categories() {
     return (
-        <div className='section category-section'>
-            <div className="container mx-auto">
-                <div className="title-section">
-                    <h3 className='title'>Shop From <span>Top Categories</span></h3>
-                    <Link to="">View All <IoIosArrowForward /></Link>
-                </div>
 
-                <div className="categories grid lg:grid-cols-7 grid-cols-2 gap-14">
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category1} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+        <div className="categories grid lg:grid-cols-7 grid-cols-2 gap-14">
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category1} alt="" />
                     </div>
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category2} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+                    <p>Mobile</p>
+                </Link>
+            </div>
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category2} alt="" />
                     </div>
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category1} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+                    <p>Mobile</p>
+                </Link>
+            </div>
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category1} alt="" />
                     </div>
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category1} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+                    <p>Mobile</p>
+                </Link>
+            </div>
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category1} alt="" />
                     </div>
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category1} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+                    <p>Mobile</p>
+                </Link>
+            </div>
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category1} alt="" />
                     </div>
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category1} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+                    <p>Mobile</p>
+                </Link>
+            </div>
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category1} alt="" />
                     </div>
-                    <div className="category">
-                        <Link to='/'>
-                            <div className="image">
-                                <img src={Category1} alt="" />
-                            </div>
-                            <p>Mobile</p>
-                        </Link>
+                    <p>Mobile</p>
+                </Link>
+            </div>
+            <div className="category">
+                <Link to='/'>
+                    <div className="image">
+                        <img src={Category1} alt="" />
                     </div>
-                </div>
+                    <p>Mobile</p>
+                </Link>
             </div>
         </div>
     )
