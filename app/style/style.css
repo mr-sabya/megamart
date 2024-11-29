@@ -7,34 +7,34 @@
     --border: 1px solid #EDEDED;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     display: inline-block;
 }
 
-.section{
+.section {
     padding: 60px 0;
 }
 
-.top-section{
+.top-section {
     margin-top: 60px;
 }
 
-h3.title{
+h3.title {
     font-size: 24px;
     font-weight: 600;
 }
 
-h3.title span{
+h3.title span {
     color: var(--primary-color);
 }
 
-.title-section{
+.title-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,26 +43,26 @@ h3.title span{
     margin-bottom: 40px;
 }
 
-.title-section a{
+.title-section a {
     display: flex;
     align-items: center;
     gap: 5px;
     transition: all .3s linear;
 }
 
-.title-section a svg{
+.title-section a svg {
     color: var(--primary-color);
 }
 
-.title-section a:hover{
+.title-section a:hover {
     gap: 10px;
 }
 
-.title-section .title{
+.title-section .title {
     position: relative;
 }
 
-.title-section .title::after{
+.title-section .title::after {
     content: '';
     width: 100%;
     height: 3px;
@@ -70,4 +70,75 @@ h3.title span{
     position: absolute;
     bottom: -12px;
     left: 0;
+}
+
+input[type=text] {
+    border: 1px solid #d1d5db;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--heading);
+}
+
+input[type=text]:focus {
+    border-color: var(--primary-color);
+    outline-color: var(--primary-color);
+}
+
+/* Checkbox container */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Adds space between the checkbox and the label */
+    margin-bottom: 10px;
+}
+
+/* Checkbox styling */
+.check-box {
+    width: 1.3rem;
+    height: 1.3rem;
+    appearance: none;
+    /* Removes default browser styling */
+    border: 2px solid #ccc;
+    border-radius: 0.2rem;
+    /* Optional: slightly rounded corners */
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    /* Enables positioning for ::after */
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Smooth transitions */
+}
+
+/* Checkbox hover effect */
+.check-box:hover {
+    border-color: #888;
+    /* Changes border color on hover */
+}
+
+/* Checkbox checked state */
+.check-box:checked {
+    background-color: var(--primary-color);
+    /* Background becomes green when checked */
+    border-color: var(--primary-color);
+    /* Matches border with background */
+}
+
+/* Check mark */
+.check-box:checked::after {
+    content: "";
+    /* Adds a pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg) scaleX(-1);
+    /* Reflects the tick shape */
+    width: 0.6rem;
+    /* Adjust check mark size */
+    height: 0.3rem;
+    border: solid white;
+    /* White check mark */
+    border-width: 0 0.2rem 0.2rem 0;
+    /* Creates the "tick" shape */
 }
