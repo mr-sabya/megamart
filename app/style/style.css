@@ -1,5 +1,6 @@
 :root {
     --primary-color: #4CAF50;
+    --primary-color-hover: #378a39;
     --background_1: #F5F5F5;
     --background_3: #F3F9FB;
     --heading: #333333;
@@ -141,4 +142,25 @@ input[type=text]:focus {
     /* White check mark */
     border-width: 0 0.2rem 0.2rem 0;
     /* Creates the "tick" shape */
+}
+
+
+
+/* login page */
+.login {
+    padding: 80px 0;
+}
+
+
+.btn-full{
+    width: 100%;
+    background: var(--primary-color);
+    padding: 8px 0;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+.btn-full:hover{
+    background: var(--primary-color-hover);
 }

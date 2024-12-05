@@ -17,8 +17,11 @@ import TopHeader from "./components/top-header/TopHeader";
 import Menu from "./components/menu/Menu";
 import Footer from "./components/footer/Footer";
 
+import { CartProvider } from "./context/CartContext";
+import SideCart from "./components/sidecart/SideCart";
+
 export const links: LinksFunction = () => [
-    
+
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
         rel: "preconnect",
@@ -57,9 +60,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Links />
             </head>
             <body>
-                <TopHeader />
-                <Header />
-                <Menu />
+
+                <CartProvider>
+                    <TopHeader />
+                    <Header />
+                    <Menu />
+                    <SideCart />
+                </CartProvider>
+
+
                 {children}
                 <Footer />
                 <ScrollRestoration />
