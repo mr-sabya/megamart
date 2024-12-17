@@ -1,0 +1,22 @@
+.top-header{
+    background: var(--background_1);
+    padding: 10px 0;
+}
+
+.top-header p{
+    font-size: 13px;
+    color: var(--text);
+}
+
+.top-header .icon a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.top-header .icon svg{
+    color: var(--primary-color);
+    font-size: 18px;
+}
